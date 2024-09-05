@@ -5,6 +5,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { useState, useEffect } from "react";
 import { Data, data } from "./data/data";
 import Autoplay from "embla-carousel-autoplay";
+import { CldVideoPlayer } from "next-cloudinary";
+import "next-cloudinary/dist/cld-video-player.css";
 
 export default function Expo() {
   const [orientation, setOrientation] = useState<string>("horizontal");
@@ -37,25 +39,39 @@ export default function Expo() {
         }}
         plugins={[
           Autoplay({
-            delay: 5000,
+            delay: 6000,
             playOnInit: true,
             active: true,
           }),
         ]}>
-        <CarouselContent className="md:w-1/4">
+        <CarouselContent className="md:w-1/3">
           {data.map((item: Data, index: number) => (
             <CarouselItem key={index}>
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle>{item.title}</CardTitle>
-                  <CardDescription>{item.description}</CardDescription>
-                </CardHeader>
-                <CardContent>VIDEO</CardContent>
+              <CldVideoPlayer
+                src={`videos/${item.source}`}
+                width="50"
+                height="50"
+                className="rounded-lg"
+              />
+              <Card className="flex flex-col h-full">
+                {/* <CardContent>
+                  <CardHeader className="px-0">
+                    <CardTitle>{item.title}</CardTitle>
+                    <CardDescription>{item.description}</CardDescription>
+                  </CardHeader>
+                  <CldVideoPlayer
+                    src={`videos/${item.source}`}
+                    width="500"
+                    height="899"
+                    className="rounded-lg"
+                  />
+                </CardContent> */}
               </Card>
             </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>
+      <div>OK</div>
     </section>
   );
 }
