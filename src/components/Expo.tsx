@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { data } from "./data/data";
-import Video from "@/components/Video";
+import CarouselComponent from "./CarouselComponent";
 
 const Expo = () => {
   return (
@@ -20,7 +20,8 @@ const Expo = () => {
             <div className="p-1">
               <Card>
                 <CardContent className="p-5 text-[hsl(var(--accent))]">
-                  <Video />
+                  <div>{item.title}</div>
+                  <CarouselComponent />
                 </CardContent>
               </Card>
             </div>
