@@ -1,3 +1,5 @@
+"use client";
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -9,24 +11,37 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { CldVideoPlayer } from "next-cloudinary";
+import "next-cloudinary/dist/cld-video-player.css";
 
-import { data } from "./data/data";
+interface CarouselComponentProps {
+  item: {
+    title: string;
+    description: string;
+    source: string;
+  };
+}
 
-const CarouselComponent = () => {
+const CarouselComponent: React.FC<CarouselComponentProps> = ({ item }) => {
   return (
     <AlertDialog>
-      <AlertDialogTrigger>Open</AlertDialogTrigger>
+      <AlertDialogTrigger>{item.title}</AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-          <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete your account and remove your data from our
-            servers.
-          </AlertDialogDescription>
+          <AlertDialogTitle>{item.title}</AlertDialogTitle>
+          <AlertDialogDescription>{item.description}</AlertDialogDescription>
+          <CldVideoPlayer
+            width="50"
+            height="50"
+            src={`videos/${item.source}`}
+            fontFace="Source Serif Pro"
+          />
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction>Continue</AlertDialogAction>
+          <AlertDialogAction className="bg-black hover:bg-[hsl(var(--accent))] hover:border hover:border-black text-[hsl(var(--accent))] hover:text-black">
+            Continue
+          </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

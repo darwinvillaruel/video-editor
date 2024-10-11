@@ -20,8 +20,7 @@ const Expo = () => {
             <div className="p-1">
               <Card>
                 <CardContent className="p-5 text-[hsl(var(--accent))]">
-                  <div>{item.title}</div>
-                  <CarouselComponent />
+                  <CarouselComponent item={item} />
                 </CardContent>
               </Card>
             </div>

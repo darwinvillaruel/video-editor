@@ -11,10 +11,18 @@ const Footer = () => {
         <p>You can reach out to me through these different channels</p>
       </div>
       <div className="flex flex-row gap-2 my-3 text-2xl">
-        <FaInstagramSquare />
-        <FaFacebook />
-        <FaTiktok />
-        <FaEnvelope />
+        <a href="https://www.instagram.com/marcusadriango">
+          <FaInstagramSquare />
+        </a>
+        <a href="https://www.facebook.com/marcus.go.35">
+          <FaFacebook />
+        </a>
+        <a href="https://www.tiktok.com/@marcus.adrian.go">
+          <FaTiktok />
+        </a>
+        <a href="marcgo314@gmail.com">
+          <FaEnvelope />
+        </a>
       </div>
       <div></div>
     </footer>

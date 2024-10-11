@@ -6,10 +6,22 @@ interface Data {
 
 export const data: Data[] = [
   {
+    title: "Chili's",
+    description:
+      "Created an engaging original video edit for “Chili's” for a gig, a famous American casual dining restaurant chain. Used manual transitions and static close ups, used a fast paces song and matched it with the clips.",
+    source: "chilis",
+  },
+  {
     title: "Fika",
     description:
       "Created an engaging original video edit for “Fika”, a coffee shop located in Iloilo City. Used manual slow transitions and static close ups, used a slow song and matched it with the clips and added filters to have a slow vintage vibe.",
     source: "fika",
+  },
+  {
+    title: "Kalye",
+    description:
+      "Created an engaging original video edit for “Kalye”, a coffee shop located in Iloilo City. Used manual slow transitions and static close ups, used a vintage song and matched it with the cuts of the clips.",
+    source: "kalye",
   },
   {
     title: "Camiña Balay Nga Bato",
@@ -28,18 +40,6 @@ export const data: Data[] = [
     description:
       "Created an engaging original video edit for “Sweet or Savory”, a homemade ice cream and food shop business located in Iloilo City. Used a lot of close ups and static video, used a slow song and matched it with the clips and added filters to have a slow vintage vibe.",
     source: "sweet_savory",
-  },
-  {
-    title: "Kalye",
-    description:
-      "Created an engaging original video edit for “Kalye”, a coffee shop located in Iloilo City. Used manual slow transitions and static close ups, used a vintage song and matched it with the cuts of the clips.",
-    source: "kalye",
-  },
-  {
-    title: "Chili's",
-    description:
-      "Created an engaging original video edit for “Chili's” for a gig, a famous American casual dining restaurant chain. Used manual transitions and static close ups, used a fast paces song and matched it with the clips.",
-    source: "chilis",
   },
   {
     title: "Convenience Coffeehouse",
