@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className={`${lexend.className}`}>
       <section className="flex flex-col items-center md:gap-4 py-3 font-bold text-xl md:text-4xl">
-        <h2 className="text-3xl md:text-7xl">Turning Raw Footage </h2>
+        <h2 className="text-3xl md:text-6xl">Turning Raw Footage </h2>
         <h2>into Cinematic Experiences</h2>
       </section>
       <section className="justify-end gap-4 grid md:grid-cols-2 my-3">
